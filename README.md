@@ -24,6 +24,36 @@ ContactVault is a secure RESTful API built with Node.js, Express, and MongoDB fo
 
 ---
 
+## 📬 API Endpoints
+
+### 🔐 Authentication Routes
+
+| Method | Endpoint              | Description           | Request Body (JSON)                                                                 |
+|--------|-----------------------|------------------------|--------------------------------------------------------------------------------------|
+| POST   | `/api/users/register` | Register new user      | `{ "username": "rithvik", "email": "r@example.com", "password": "pass123" }`        |
+| POST   | `/api/users/login`    | Login existing user    | `{ "email": "r@example.com", "password": "pass123" }`                                |
+| GET    | `/api/users/current`  | Get current user info  | _None_ (Requires token in headers)                                                  |
+
+---
+
+### 📇 Contact Routes (Protected)
+
+| Method | Endpoint                | Description           | Request Body (JSON)                                                                 |
+|--------|-------------------------|------------------------|--------------------------------------------------------------------------------------|
+| GET    | `/api/contacts`         | Get all contacts       | _None_                                                                              |
+| GET    | `/api/contacts/:id`     | Get a single contact   | _None_                                                                              |
+| POST   | `/api/contacts`         | Create new contact     | `{ "name": "John", "email": "john@example.com", "phone": "1234567890" }`            |
+| PUT    | `/api/contacts/:id`     | Update a contact       | `{ "name": "Jane", "email": "jane@example.com", "phone": "9876543210" }`            |
+| DELETE | `/api/contacts/:id`     | Delete a contact       | _None_                                                                              |
+
+---
+
+### 🔐 Authorization
+
+Add the JWT token in the request headers for all protected routes:
+
+---
+
 ## 📦 Installation
 
 1. **Clone the repository**
