@@ -32,6 +32,6 @@ ContactVault is a secure RESTful API built with Node.js, Express, and MongoDB fo
    cd contactvault
 
 
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-ACCESS_TOKEN_SECRET=your_jwt_secret_key
+```PORT=5000
+```MONGO_URI=your_mongodb_connection_string
+```ACCESS_TOKEN_SECRET=your_jwt_secret_key
